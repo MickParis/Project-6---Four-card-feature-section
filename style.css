@@ -1,0 +1,204 @@
+/* Poppins Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    /* Primary Colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* Neutral Colors */
+    --grey500: hsl(234, 12%, 34%);
+    --grey400: hsl(212, 6%, 44%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: var(--grey500)
+}
+
+h1 + h2 {
+    margin-block-end: 1rem;
+}
+
+p {
+    max-width: 19.75rem;
+    margin: auto;
+    font-size: 0.9rem;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+h3 + p {
+    margin-block-start: 0.4rem;
+    margin-block-end: 2rem;    
+}
+
+img {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* Card Styles */
+.card {
+    max-width: 21rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow:  10px 10px 15px  hsla(0, 0%, 0%, 0.1);
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+/* Card Colors */
+.card:nth-child(1) {
+    border-top: 0.4rem solid var(--cyan);
+}
+
+.card:nth-child(2) {
+    border-top: 0.4rem solid var(--red);
+}
+
+.card:nth-child(3) {
+    border-top: 0.4rem solid var(--orange);
+}
+
+.card:nth-child(4) {
+    border-top: 0.4rem solid var(--blue);
+}
+
+@media (min-width: 48rem) {
+   
+    header {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    p {
+        max-width: 36rem;
+    }
+      
+    h1,
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    .card {
+      width: 23.3rem;
+    }
+
+    .supervisor {
+        grid-area: one;
+    }
+
+    .team-builder {
+        grid-area: two;
+    }
+
+    .karma {
+        grid-area: three;
+    }
+
+    .calculator {
+        grid-area: four;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "one one"
+        "two three"
+        "four four";
+        gap: 2em;
+        width: 44rem;
+        margin: 0 auto;
+        }
+
+    .supervisor,
+    .calculator {
+        justify-self: center;
+        }
+}
+
+@media (min-width: 90rem) {
+    header {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    p {
+        max-width: 35rem;
+        
+    }
+
+    h1,
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    /* Card Styling */
+    .card {
+        min-width: 23.3rem;
+    }
+
+    /* Specifieke Card Styling */
+    .supervisor {
+        grid-area: one;
+    }
+
+    .team-builder {
+        grid-area: two;
+    }
+
+    .karma {
+        grid-area: three;
+    }
+
+    .calculator {
+        grid-area: four;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            ".. two .."
+            "one two four"
+            "one three four"
+            ".. three ..";
+        gap: 2em;
+        justify-content: center;
+    }
+}
